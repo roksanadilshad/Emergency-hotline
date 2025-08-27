@@ -145,11 +145,11 @@ function getText(index){
         return;
     }
     else{
-        alert('📞...  Calling Anticoraption Helpline 106')
+        alert('📞...  Calling Anti-Corruption Helpline 106')
     }
         getTotal('coin-count', totalCoin);
         const data = {
-            name: 'Anticoraption Helpline',
+            name: 'Anti-Corruption Helpline',
             number: '106',
             date: new Date().toLocaleTimeString()
 
@@ -185,11 +185,11 @@ function getText(index){
         return;
     }
     else{
-        alert('📞...  Calling Brack Helpline 16445')
+        alert('📞...  Calling BRAC Helpline 16445')
     }
         getTotal('coin-count', totalCoin);
         const data = {
-            name: 'Brack Helpline',
+            name: 'BRAC Helpline',
             number: '16445',
             date: new Date().toLocaleTimeString()
 
@@ -276,6 +276,7 @@ for(const btn of callBtns){
 document.getElementById('clear-history-btn').addEventListener('click', function(){
  const clearHistory = document.getElementById('history-container');
 clearHistory.innerHTML = '';
+callHistory.length = 0;
  
 })
 
