@@ -217,46 +217,7 @@ function getText(index){
         callHistory.push(data);
         
 })
-  document.getElementById('Fire-service').addEventListener('click', function(){
-    const coinCount = getNumber('coin-count');
-    const totalCoin = coinCount - 20;
-    if(coinCount <= 0 || coinCount < 20){
-        alert("You don't have sufficient 'Coin'");
-        return;
-    }
-    else{
-        alert('📞...  Calling Fire-service 999')
-    }
-        getTotal('coin-count', totalCoin);
-        const data = {
-            name: 'Fire-service',
-            number: '999',
-            date: new Date().toLocaleTimeString()
 
-        }
-        callHistory.push(data);
-        
-})
-  document.getElementById('Fire-service').addEventListener('click', function(){
-    const coinCount = getNumber('coin-count');
-    const totalCoin = coinCount - 20;
-    if(coinCount <= 0 || coinCount < 20){
-        alert("You don't have sufficient 'Coin'");
-        return;
-    }
-    else{
-        alert('📞...  Calling Fire-service 999')
-    }
-        getTotal('coin-count', totalCoin);
-        const data = {
-            name: 'Fire-service',
-            number: '999',
-            date: new Date().toLocaleTimeString()
-
-        }
-        callHistory.push(data);
-        
-})
 
 //coppy btn
 
