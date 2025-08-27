@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="max-w-xl lg:max-w-full mx-auto hind-madurai-light bg-[#F5FFF6] ">
+<body class="max-w-xl lg:max-w-full mx-auto hind-madurai-light bg-[#F5FFF6] lg:h-[90vw] ">
     <div class="flex justify-between items-center bg-white lg:px-[60px] px-3.5 lg:py-[25px] py-[15px]">
         <div class="flex justify-between items-center ">
             <div class="lg:w-[50px] w-[40px] lg:mr-[10px] mr-1.5">
@@ -35,7 +35,7 @@
             </div>
             <!-- green padding -->
             <div  class="lg:ml-[10px] inter  lg:px-[36px] lg:py-[12px] ml-[0px]   px-[20px] py-[8px] rounded-[50px] text-white bg-[#00A63E] text-[12px] lg:text-[16px]">
-             <h4>2 Copy</h4>
+             <h4><span id="copy-count">0</span> Copy</h4>
             </div>
         </div>
     </div>
@@ -51,13 +51,13 @@
      </div>
 
      <!-- main -->
-      <div class="lg:mt-12 lg:mx-[60px] lg:mb-[86px] mt-6 mx-[30px] mb-[40px] flex justify-between items-center lg:flex-row flex-col items-stretch">
+      <div class="lg:mt-12 lg:mx-[60px] lg:mb-[86px] mt-6 mx-[30px]  flex justify-between lg:flex-row flex-col items-stretch">
+         <!-- cards -->
         <div class="grid lg:grid-cols-3 grid-cols-1 gap-[24px]">
-            <!-- cards -->
              <!-- card 1 -->
         <div class="p-[32px] bg-white rounded-[12px]  shadow-md">
              <div class="flex justify-between items-center mb-4">
-             <div class="lg:w-[60px] w-[40px] rounded-full bg-[#FFE3E2] lg:p-[14px] p-[10px]">
+             <div class="lg:w-[60px] w-[40px] lg:p-[14px] p-[10px] rounded-full bg-[#FFE3E2] ">
                 <img src="assets/emergency.png" alt="" class=" text-[#5C5C5C]">
              </div>
              <!-- heart-btn -->
@@ -74,10 +74,10 @@
              </div>
 
              <div class="flex justify-center items-center">
-                <button data-copy-target="0" class="copy-btn  mr-[5px] roboto text-[16px] btn  lg:px-[60px] px-10 rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
+                <button data-copy-target="0" class="copy-btn  mr-[5px] roboto text-[16px] btn  lg:px-[60px] px-[15%] rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
 
                 <!-- emergency call -->
-             <button id="emergency-call" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-12 rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
+             <button id="emergency-call" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
              </div>
         </div>
 
@@ -103,8 +103,8 @@
              </div>
 
              <div class="flex justify-center items-center">
-                <button data-copy-target="1" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-10 rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
-             <button id="police-call" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-12 rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
+                <button data-copy-target="1" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
+             <button id="police-call" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
              </div>
         </div>
 
@@ -113,7 +113,7 @@
         <div class="p-[32px] bg-white rounded-[12px]  shadow-md">
              <div class="flex justify-between items-center mb-4">
              <div class="lg:w-[60px] w-[40px] rounded-full bg-[#FFE3E2] lg:p-[14px] p-[10px]">
-                <img src="assets/emergency.png" alt="" class="w-[24px] text-[#5C5C5C]">
+                <img src="assets/fire-service.png" alt="" class=" text-[#5C5C5C]">
              </div>
              <!-- id="heart-btn" -->
              <i class="heart-btn ri-heart-3-line"></i>
@@ -129,148 +129,155 @@
              </div>
 
              <div class="flex justify-center items-center">
-                <button data-copy-target="2" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-10 rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
-             <button id="Fire-service" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-12 rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
+                <button data-copy-target="2" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
+             <button id="Fire-service" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
              </div>
         </div>
+        <!-- card 4 -->
         <div class="p-[32px] bg-white rounded-[12px]  shadow-md">
              <div class="flex justify-between items-center mb-4">
              <div class="lg:w-[60px] w-[40px] rounded-full bg-[#FFE3E2] lg:p-[14px] p-[10px]">
-                <img src="assets/emergency.png" alt="" class="w-[24px] text-[#5C5C5C]">
+                <img src="assets/ambulance.png" alt="" class=" text-[#5C5C5C]">
              </div>
              <!-- id="heart-btn" -->
              <i class="heart-btn ri-heart-3-line"></i>
              </div>
              <div class="lg:mb-6 mb-2.5">
-                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Fire Service Number</h4>
-             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Fire Service</p>
+                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Ambulance Service</h4>
+             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Ambulance</p>
              </div>
              
              <div class="mb-6">
-                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">999</h3>
-             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">All</p>
+                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">1994-999999</h3>
+             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">Health</p>
              </div>
 
              <div class="flex justify-center items-center">
-                <button data-copy-target="2" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-10 rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
-             <button id="Fire-service" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-12 rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
+                <button data-copy-target="3" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
+             <button id="ambulance-service" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
              </div>
         </div>
+        <!-- card 5 -->
         <div class="p-[32px] bg-white rounded-[12px]  shadow-md">
              <div class="flex justify-between items-center mb-4">
              <div class="lg:w-[60px] w-[40px] rounded-full bg-[#FFE3E2] lg:p-[14px] p-[10px]">
-                <img src="assets/emergency.png" alt="" class="w-[24px] text-[#5C5C5C]">
+                <img src="assets/emergency.png" alt="" class=" text-[#5C5C5C]">
              </div>
              <!-- id="heart-btn" -->
              <i class="heart-btn ri-heart-3-line"></i>
              </div>
              <div class="lg:mb-6 mb-2.5">
-                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Fire Service Number</h4>
-             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Fire Service</p>
+                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Women & Child Helpline</h4>
+             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Women & Child Helpline</p>
              </div>
              
              <div class="mb-6">
-                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">999</h3>
-             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">All</p>
+                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">109</h3>
+             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">Help</p>
              </div>
 
              <div class="flex justify-center items-center">
-                <button data-copy-target="2" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-10 rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
-             <button id="Fire-service" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-12 rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
+                <button data-copy-target="4" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
+             <button id="women-and-child-helpline" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
              </div>
         </div>
+        <!-- card 6 -->
         <div class="p-[32px] bg-white rounded-[12px]  shadow-md">
              <div class="flex justify-between items-center mb-4">
              <div class="lg:w-[60px] w-[40px] rounded-full bg-[#FFE3E2] lg:p-[14px] p-[10px]">
-                <img src="assets/emergency.png" alt="" class="w-[24px] text-[#5C5C5C]">
+                <img src="assets/emergency.png" alt="" class=" text-[#5C5C5C]">
              </div>
              <!-- id="heart-btn" -->
              <i class="heart-btn ri-heart-3-line"></i>
              </div>
              <div class="lg:mb-6 mb-2.5">
-                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Fire Service Number</h4>
-             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Fire Service</p>
+                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Anti-Corruption Helpline</h4>
+             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Anti-Corruption</p>
              </div>
              
              <div class="mb-6">
-                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">999</h3>
-             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">All</p>
+                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">106</h3>
+             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">Govt.</p>
              </div>
 
              <div class="flex justify-center items-center">
-                <button data-copy-target="2" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-10 rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
-             <button id="Fire-service" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-12 rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
+                <button data-copy-target="5" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i>Copy</button>
+             <button id="anticoraption-helpline" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
              </div>
         </div>
+        <!-- card 7 -->
         <div class="p-[32px] bg-white rounded-[12px]  shadow-md">
              <div class="flex justify-between items-center mb-4">
              <div class="lg:w-[60px] w-[40px] rounded-full bg-[#FFE3E2] lg:p-[14px] p-[10px]">
-                <img src="assets/emergency.png" alt="" class="w-[24px] text-[#5C5C5C]">
+                <img src="assets/emergency.png" alt="" class=" text-[#5C5C5C]">
              </div>
              <!-- id="heart-btn" -->
              <i class="heart-btn ri-heart-3-line"></i>
              </div>
              <div class="lg:mb-6 mb-2.5">
-                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Fire Service Number</h4>
-             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Fire Service</p>
+                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Electricity Helpline</h4>
+             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Electricity Outage</p>
              </div>
              
              <div class="mb-6">
-                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">999</h3>
-             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">All</p>
+                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">16216</h3>
+             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">Electricity</p>
              </div>
 
              <div class="flex justify-center items-center">
-                <button data-copy-target="2" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-10 rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
-             <button id="Fire-service" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-12 rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
+                <button data-copy-target="6" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
+             <button id="electricity-helpline" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
              </div>
         </div>
+        <!-- card 8 -->
         <div class="p-[32px] bg-white rounded-[12px]  shadow-md">
              <div class="flex justify-between items-center mb-4">
              <div class="lg:w-[60px] w-[40px] rounded-full bg-[#FFE3E2] lg:p-[14px] p-[10px]">
-                <img src="assets/emergency.png" alt="" class="w-[24px] text-[#5C5C5C]">
+                <img src="assets/brac.png" alt="" class=" text-[#5C5C5C]">
              </div>
              <!-- id="heart-btn" -->
              <i class="heart-btn ri-heart-3-line"></i>
              </div>
              <div class="lg:mb-6 mb-2.5">
-                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Fire Service Number</h4>
-             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Fire Service</p>
+                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Brac Helpline</h4>
+             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Brac</p>
              </div>
              
              <div class="mb-6">
-                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">999</h3>
-             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">All</p>
+                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">16445</h3>
+             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">NGO</p>
              </div>
 
              <div class="flex justify-center items-center">
-                <button data-copy-target="2" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-10 rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
-             <button id="Fire-service" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-12 rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
+                <button data-copy-target="7" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
+             <button id="brack-helpline" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
              </div>
         </div>
+        <!-- card 9 -->
         <div class="p-[32px] bg-white rounded-[12px]  shadow-md">
              <div class="flex justify-between items-center mb-4">
              <div class="lg:w-[60px] w-[40px] rounded-full bg-[#FFE3E2] lg:p-[14px] p-[10px]">
-                <img src="assets/emergency.png" alt="" class="w-[24px] text-[#5C5C5C]">
+                <img src="assets/Bangladesh-Railway.png" alt="" class=" text-[#5C5C5C]">
              </div>
              <!-- id="heart-btn" -->
              <i class="heart-btn ri-heart-3-line"></i>
              </div>
              <div class="lg:mb-6 mb-2.5">
-                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Fire Service Number</h4>
-             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Fire Service</p>
+                <h4 class="font-bold lg:text-2xl/[32px] text-xl">Bangladesh Railway Helpline </h4>
+             <p class="roboto lg:text-[18px] text-[14px] text-[#5C5C5C]">Bangladesh Railway</p>
              </div>
              
              <div class="mb-6">
-                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">999</h3>
-             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">All</p>
+                <h3 class="copy-text roboto font-bold lg:text-[32px] text-[26px] text-[#111111]">163</h3>
+             <p class="lg:px-[16px] px-[10px] lg:py-[6px] py-1 rounded-[40px] bg-[#F2F2F2] inline-block text-[#5C5C5C]">Travel</p>
              </div>
 
              <div class="flex justify-center items-center">
-                <button data-copy-target="2" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-10 rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
-             <button id="Fire-service" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-12 rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
+                <button data-copy-target="8" class="copy-btn mr-[5px] roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#D4D6D5] border-1 text-[#aeafae]"><i class="ri-file-copy-line"></i> Copy</button>
+             <button id="bd-railway-helpline" class="history-btn btn-soft btn-primary roboto text-[16px] btn lg:px-[60px] px-[15%] rounded-[8px] border-[#00A63E] border-1 bg-[#00A63E] text-white"><i class="ri-phone-line"></i> Call</button>
              </div>
         </div>
+        
         </div>
 
         <!-- history -->

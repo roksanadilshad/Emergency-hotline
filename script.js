@@ -49,7 +49,7 @@ function getText(index){
         getTotal('coin-count', totalCoin);
 
         const data = {
-            name: 'emergency-call',
+            name: 'National Emergency',
             number: '999',
             date: new Date().toLocaleTimeString()
 
@@ -66,16 +66,176 @@ function getText(index){
         return;
     }
     else{
-        alert('📞 Calling police 999...')
+        alert('📞 Calling Police Helpline 999...')
     }
         getTotal('coin-count', totalCoin);
         const data = {
-            name: 'police-call',
+            name: 'police Helpline',
             number: '999',
             date: new Date().toLocaleTimeString()
 
         }
         callHistory.push(data);
+})
+  document.getElementById('Fire-service').addEventListener('click', function(){
+    const coinCount = getNumber('coin-count');
+    const totalCoin = coinCount - 20;
+    if(coinCount <= 0 || coinCount < 20){
+        alert("You don't have sufficient 'Coin'");
+        return;
+    }
+    else{
+        alert('📞...  Calling Fire Service 999')
+    }
+        getTotal('coin-count', totalCoin);
+        const data = {
+            name: 'Fire Service',
+            number: '999',
+            date: new Date().toLocaleTimeString()
+
+        }
+        callHistory.push(data);
+        
+})
+  document.getElementById('ambulance-service').addEventListener('click', function(){
+    const coinCount = getNumber('coin-count');
+    const totalCoin = coinCount - 20;
+    if(coinCount <= 0 || coinCount < 20){
+        alert("You don't have sufficient 'Coin'");
+        return;
+    }
+    else{
+        alert('📞...  Calling Ambulance Service 1994-999999')
+    }
+        getTotal('coin-count', totalCoin);
+        const data = {
+            name: 'Ambulance Service',
+            number: '1994-999999',
+            date: new Date().toLocaleTimeString()
+
+        }
+        callHistory.push(data);
+        
+})
+  document.getElementById('women-and-child-helpline').addEventListener('click', function(){
+    const coinCount = getNumber('coin-count');
+    const totalCoin = coinCount - 20;
+    if(coinCount <= 0 || coinCount < 20){
+        alert("You don't have sufficient 'Coin'");
+        return;
+    }
+    else{
+        alert('📞...  Calling Women and Child Helpline 109')
+    }
+        getTotal('coin-count', totalCoin);
+        const data = {
+            name: 'Women and Child Helpline',
+            number: '109',
+            date: new Date().toLocaleTimeString()
+
+        }
+        callHistory.push(data);
+        
+})
+  document.getElementById('anticoraption-helpline').addEventListener('click', function(){
+    const coinCount = getNumber('coin-count');
+    const totalCoin = coinCount - 20;
+    if(coinCount <= 0 || coinCount < 20){
+        alert("You don't have sufficient 'Coin'");
+        return;
+    }
+    else{
+        alert('📞...  Calling Anticoraption Helpline 106')
+    }
+        getTotal('coin-count', totalCoin);
+        const data = {
+            name: 'Anticoraption Helpline',
+            number: '106',
+            date: new Date().toLocaleTimeString()
+
+        }
+        callHistory.push(data);
+        
+})
+  document.getElementById('electricity-helpline').addEventListener('click', function(){
+    const coinCount = getNumber('coin-count');
+    const totalCoin = coinCount - 20;
+    if(coinCount <= 0 || coinCount < 20){
+        alert("You don't have sufficient 'Coin'");
+        return;
+    }
+    else{
+        alert('📞...  Calling Electricity Helpline 16216')
+    }
+        getTotal('coin-count', totalCoin);
+        const data = {
+            name: 'Electricity Helpline',
+            number: '16216',
+            date: new Date().toLocaleTimeString()
+
+        }
+        callHistory.push(data);
+        
+})
+  document.getElementById('brack-helpline').addEventListener('click', function(){
+    const coinCount = getNumber('coin-count');
+    const totalCoin = coinCount - 20;
+    if(coinCount <= 0 || coinCount < 20){
+        alert("You don't have sufficient 'Coin'");
+        return;
+    }
+    else{
+        alert('📞...  Calling Brack Helpline 16445')
+    }
+        getTotal('coin-count', totalCoin);
+        const data = {
+            name: 'Brack Helpline',
+            number: '16445',
+            date: new Date().toLocaleTimeString()
+
+        }
+        callHistory.push(data);
+        
+})
+  document.getElementById('bd-railway-helpline').addEventListener('click', function(){
+    const coinCount = getNumber('coin-count');
+    const totalCoin = coinCount - 20;
+    if(coinCount <= 0 || coinCount < 20){
+        alert("You don't have sufficient 'Coin'");
+        return;
+    }
+    else{
+        alert('📞...  Calling Bangladesh Railway Helpline 163')
+    }
+        getTotal('coin-count', totalCoin);
+        const data = {
+            name: 'Bangladesh Railway Helpline',
+            number: '163',
+            date: new Date().toLocaleTimeString()
+
+        }
+        callHistory.push(data);
+        
+})
+  document.getElementById('Fire-service').addEventListener('click', function(){
+    const coinCount = getNumber('coin-count');
+    const totalCoin = coinCount - 20;
+    if(coinCount <= 0 || coinCount < 20){
+        alert("You don't have sufficient 'Coin'");
+        return;
+    }
+    else{
+        alert('📞...  Calling Fire-service 999')
+    }
+        getTotal('coin-count', totalCoin);
+        const data = {
+            name: 'Fire-service',
+            number: '999',
+            date: new Date().toLocaleTimeString()
+
+        }
+        callHistory.push(data);
+        
 })
   document.getElementById('Fire-service').addEventListener('click', function(){
     const coinCount = getNumber('coin-count');
@@ -112,6 +272,18 @@ for(const btn of btns){
         
     })
 }
+ const copyBtns = document.getElementsByClassName('copy-btn');//heart 
+
+  for (let btn of copyBtns) {
+    btn.addEventListener('click', function() {
+         const  copyCount = getNumber('copy-count');
+
+          const totalHeart =  copyCount + 1;
+          getTotal('copy-count', totalHeart);
+
+
+    });
+  }
 
 //history
 
